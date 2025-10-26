@@ -14,7 +14,12 @@ const app = express();
 const PORT = process.env.PORT || 5001;
 
 // middleware
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://think-board-g7e3.vercel.app/",
+    credentials: true,
+  })
+);
 app.use(express.json());
 // app.use(rateLimiter);
 
