@@ -16,7 +16,8 @@ const PORT = process.env.PORT || 5001;
 // middleware
 app.use(
   cors({
-    origin: "https://think-board-g7e3.vercel.app/",
+    origin: ["http://localhost:5173", "https://think-board-g7e3.vercel.app/"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
 );
