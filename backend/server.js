@@ -18,6 +18,7 @@ app.use(cors());
 app.use(express.json());
 // app.use(rateLimiter);
 
+app.get("/", (req, res) => res.send("Server is running"));
 app.use("/api/notes", notesRoutes);
 
 connectDB().then(() => {
